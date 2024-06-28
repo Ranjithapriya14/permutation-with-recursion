@@ -1,0 +1,15 @@
+def permutation(n):
+if len(n)==0:
+   return []
+if len(n)==1:
+   return [n]
+   l=[]
+for i in range(len(n)):
+  m=n[i]
+  rn=n[:i]+n[i+1]
+for p in permutation(rn):
+   l.append([m]+p)
+   return l
+   d=list('148')
+for p in permutation(d):
+   print(p)
